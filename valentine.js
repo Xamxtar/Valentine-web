@@ -1,11 +1,13 @@
 let userName = "";
 
 const messages = [
-  "Are you WiFi? Because I'm feeling the connection 😌❤️",
-  "If loving you was a job, I’d never resign 😂💘",
+  "Are you magnetic? because you always pull me close to you 😌❤️",
+  "you are part of the reason my mom told me to always follow my heart 💘",
   "You must be JavaScript, because you make my heart react 💻❤️",
-  "I wanted to buy you chocolate, but I realized I’m the real snack 😎🍫",
-  "No matter the bug in my life, you’re my permanent fix 💖"
+  "i use to think that real love is only seen in movies until i found you 😘🥺",
+  "i love youuuuu....😍😍😪",
+  "i need you like the moon needs the sun🥰",
+  "i want to be the reason you believe in love💞💞"
 ];
 
 let index = 0;
@@ -24,7 +26,10 @@ function startValentine() {
   document.getElementById("title").innerText = `Countdown for ${userName} 💘`;
 
   const music = document.getElementById("bgMusic");
-  music.play();
+  music.play().catch(e => {
+    console.error('Audio play failed:', e);
+    alert('Music could not play automatically due to browser policies. Please try clicking the page or check your browser settings for autoplay.');
+  });
 }
 
 function nextMessage() {
